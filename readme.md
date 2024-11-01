@@ -3,23 +3,23 @@
  ### 1. Crear unha rede en Docker
  Para crear unha nova rede en Docker, usaremos o seguinte comando:
  ```
- docker network create rede1
+ docker network create rede
  ```
- Isto crea unha rede chamada `rede1` onde poderemos conectar contedores que queiramos que se comuniquen entre eles.
+ Isto crea unha rede chamada `rede` onde poderemos conectar contedores que queiramos que se comuniquen entre eles.
  ### 2. Crear dous contedores unidos a esa rede
- A continuación, lanzamos dous contedores na rede `rede1`:
+ A continuación, lanzamos dous contedores na rede `rede`:
  ```
- docker run -dit --name contenedor1 --network rede1 alpine
- docker run -dit --name contenedor2 --network rede1 alpine
+ docker run -dit --name contenedor1 --network rede alpine
+ docker run -dit --name contenedor2 --network rede alpine
  ```
  Estes comandos crean dous contedores chamados `contenedor1` e `contenedor2`, usando a imaxe `alpine`. 
 Ao estar na mesma rede, estes contedores poderán comunicarse entre eles.
  ### 3. Comprobar que os contedores están na rede
- Para verificar os contedores conectados a `rede1`:
+ Para verificar os contedores conectados a `rede`:
  ```
- docker network inspect rede1
+ docker network inspect rede
  ```
-Este comando amosa os contedores conectados á rede `rede1` e información sobre a rede.
+Este comando amosa os contedores conectados á rede `rede` e información sobre a rede.
  ### 4. Comprobar que os contedores poden verse entre eles
  Probamos a conexión entre contedores usando `ping`:
  ```
@@ -29,7 +29,7 @@ Este comando amosa os contedores conectados á rede `rede1` e información sobre
  ### 5. Listar as propiedades da rede
  Podemos ver detalles da rede, como os contedores conectados, co comando:
  ```
- docker network inspect rede1
+ docker network inspect rede
  ```
  Esta saída amosará información da rede e enderezos IP asignados.
  ### 6. Crear outra rede e lanzar dous contedores nela
