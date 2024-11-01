@@ -70,9 +70,4 @@ Para verificar se os contedores poden comunicarse, usamos `ping` entre os conted
   minharede:
     driver: bridge
  ```
- Neste arquivo definimos:- `version`: Especifica a versión de Docker Compose.- `services`: Define tres contedores chamados `contenedor1`, `contenedor2` e `contenedor3`.- `image`: Usamos a imaxe `alpine` para os contedores.- `networks`: Ligamos cada contedor á rede `minharede`.- `driver`: Usa `bridge` para permitir a comunicación entre contedores na rede.
- ### Parámetros Adicionais en Docker Compose
- 1. **command**: Sobrescribe o comando predeterminado do contedor.
-2. **volumes**: Permite compartir datos entre o sistema anfitrión e o contedor.
- 3. **environment**: Define variables de entorno para o contedor.
- 4. **depends_on**: Define a orde de inicio entre servizos.
+ Neste arquivo definimos:- version: Especifica a versión de Docker Compose.- services: Define tres contedores chamados contenedor1, contenedor2 e contenedor3.- image: Usamos a imaxe alpine para os contedores.- networks: Ligamos cada contedor á rede minharede.- driver: Usa bridge para permitir a comunicación entre contedores na rede.
